@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of crrcbcv is to …
+This package offers a user friendly function 'crrcbcv' to compute bias-corrected variances for competing risks regression models using proportional subdistribution hazards with small-sample clustered data. Four types of bias correction are included: the MD-type bias correction by Mancl and DeRouen (2001), the KC-type bias correction by Kauermann and Carroll (2001), the FG-type bias correction by Fay and Graubard (2001), and the MBN-type bias correction by Morel, Bokossa, and Neerchal (2003).
 
 ## Installation
 
@@ -29,31 +29,9 @@ library(crrcbcv)
 #> Loading required package: abind
 #> Loading required package: pracma
 ## basic example code
+
+data(cls)
+mod.est = crrc(ftime=cls$T_obs, fstatus=cls$eps, cov1=cls[,c('X_1','X_2')], cluster=cls$I)
+crrcbcv(beta=mod.est$coef, ftime=cls$T_obs, fstatus=cls$eps, cov1=cls[,c('X_1','X_2')],
+cluster=cls$I, var.type=c('MD','KC','FG','MBN'))
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
