@@ -8,6 +8,8 @@
 #' the KC-type correction by Kauermann and Carroll (2001), the FG-type correction by Fay and Graubard (2001),
 #' and the MBN-type correction by Morel, Bokossa, and Neerchal (2003).
 #'
+#' @import abind crrSC pracma survival stats
+#'
 #' @param beta the estimated regression coefficients from `crrc`
 #' @param ftime vector of failure/censoring times
 #' @param fstatus vector with a unique code for each failure type and a separate code for censored observations

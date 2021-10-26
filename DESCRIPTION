@@ -4,10 +4,10 @@ Version: 0.0.0.9000
 Author: Xinyuan Chen and Fan Li
 Maintainer: Xinyuan Chen <xchen@math.msstate.edu> 
 Description: 
-  This package offers a user friendly function 'crrcbcv' to compute bias-corrected variances for competing risks regression models using proportional subdistribution hazards with small-sample clustered data. Four types of bias correction are included: the MD-type bias correction by Mancl and DeRouen (2001), the KC-type bias correction by Kauermann and Carroll (2001), the FG-type bias correction by Fay and Graubard (2001), and the MBN-type bias correction by Morel, Bokossa, and Neerchal (2003).
+  A user friendly function 'crrcbcv' to compute bias-corrected variances for competing risks regression models using proportional subdistribution hazards with small-sample clustered data. Four types of bias correction are included: the MD-type bias correction by Mancl and DeRouen (2001), the KC-type bias correction by Kauermann and Carroll (2001), the FG-type bias correction by Fay and Graubard (2001), and the MBN-type bias correction by Morel, Bokossa, and Neerchal (2003).
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Depends: crrSC, abind, pracma, survival
+Depends: crrSC, abind, pracma, survival, stats
