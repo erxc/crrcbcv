@@ -17,7 +17,7 @@ and Carroll (2001), the FG-type bias correction by Fay and Graubard
 
 ## Installation
 
-You can install the released version of crrcbcv from
+You can install the released version of `crrcbcv` from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
