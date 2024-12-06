@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package offers a user friendly function ‘crrcbcv’ to compute
+This package offers a user friendly function `crrcbcv` to compute
 bias-corrected variances for competing risks regression models using
 proportional subdistribution hazards with small-sample clustered data.
 Four types of bias correction are included: the MD-type bias correction
